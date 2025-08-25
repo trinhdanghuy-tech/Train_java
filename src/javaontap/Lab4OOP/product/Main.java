@@ -1,4 +1,4 @@
-package javaontap.Lab4;
+package javaontap.Lab4OOP.product;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package javaontap.Lab4;
+package javaontap.Lab4OOP.student;
 
 public class Student {
    private  String name;

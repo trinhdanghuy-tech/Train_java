@@ -1,4 +1,4 @@
-package javaontap.Lab4;
+package javaontap.Lab4OOP.student;
 
 import java.util.Scanner;
 
