@@ -1,0 +1,56 @@
+Bài tập 4: Hệ thống đặt vé sự kiện (Nâng cao)
+Mục tiêu: Luyện tập tất cả khái niệm (OOP, Date/Time, Enums, Inner Class).
+Yêu cầu:
+
+Tạo một enum TicketType với các giá trị: STANDARD, VIP, PREMIUM.
+
+Thêm field priceMultiplier (double) để nhân giá vé cơ bản (ví dụ: STANDARD = 1.0, VIP = 1.5, PREMIUM = 2.0).
+Thêm phương thức getPrice(double basePrice) để tính giá vé.
+
+
+Tạo một interface Event với các phương thức:
+
+getEventDetails(): String.
+isUpcoming(): boolean (kiểm tra sự kiện có trong tương lai không).
+
+
+Tạo một abstract class AbstractEvent implement Event:
+
+Thuộc tính: name (String, private), eventDate (LocalDateTime, private), basePrice (double, private).
+Constructor và getter/setter (đảm bảo encapsulation).
+Implement isUpcoming() bằng cách so sánh eventDate với thời gian hiện tại.
+Phương thức trừu tượng: getEventType().
+
+
+Tạo hai class con: Concert và SportsGame, kế thừa từ AbstractEvent:
+
+Concert có thêm thuộc tính artist (String, private).
+SportsGame có thêm thuộc tính teams (String[], private).
+Override getEventDetails() và getEventType() (trả về "Concert" hoặc "Sports").
+
+
+Tạo một anonymous inner class trong class Main:
+
+Implement Event để tạo một sự kiện tùy chỉnh (như hội thảo).
+Gọi getEventDetails() và isUpcoming().
+
+
+Tạo một local inner class trong một phương thức của Main gọi là Ticket:
+
+Thuộc tính: event (Event), ticketType (TicketType).
+Phương thức: calculateTotalPrice() trả về giá vé dựa trên basePrice và ticketType.getPrice().
+
+
+Trong class Main:
+
+Tạo một danh sách các sự kiện (Concert, SportsGame, và anonymous event).
+In chi tiết và kiểm tra xem sự kiện có sắp diễn ra không.
+Tạo và tính giá vé cho một sự kiện.
+
+
+
+Gợi ý:
+
+Dùng List<Event> events = new ArrayList<>() để lưu trữ các sự kiện.
+Sử dụng LocalDateTime.now() để so sánh với eventDate.
+Anonymous inner class có thể được thay bằng lambda nếu interface chỉ có một phương thức.
